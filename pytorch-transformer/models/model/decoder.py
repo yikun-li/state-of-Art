@@ -3,7 +3,6 @@
 @when : 2019-12-18
 @homepage : https://github.com/gusdnd852
 """
-import torch
 from torch import nn
 
 from models.blocks.decoder_layer import DecoderLayer

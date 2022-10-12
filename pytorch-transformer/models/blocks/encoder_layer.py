@@ -26,15 +26,15 @@ class EncoderLayer(nn.Module):
         # 1. compute self attention
         _x = x
         x = self.attention(q=x, k=x, v=x, mask=s_mask)
-        
+
         # 2. add and norm
         x = self.norm1(x + _x)
         x = self.dropout1(x)
-        
+
         # 3. positionwise feed forward network
         _x = x
         x = self.ffn(x)
-      
+
         # 4. add and norm
         x = self.norm2(x + _x)
         x = self.dropout2(x)
